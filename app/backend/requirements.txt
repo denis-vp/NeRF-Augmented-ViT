@@ -1,0 +1,34 @@
+# romatch requirements
+torch~=2.7.1
+einops~=0.8.1
+torchvision~=0.22.1
+opencv-python~=4.11.0.86
+kornia~=0.8.1
+albumentations
+loguru~=0.7.3
+tqdm~=4.67.1
+matplotlib~=3.10.3
+h5py~=3.14.0
+wandb~=0.20.1
+timm
+poselib~=2.0.4
+
+# depth_anything_v2 requirements
+gradio_imageslider~=0.0.20
+gradio>=4.38.0
+matplotlib
+opencv-python
+torch
+torchvision
+
+# Additional requirements
+numpy~=1.26.4
+fastapi~=0.115.12
+pillow~=10.4.0
+
+pydantic~=2.11.5
+starlette~=0.46.2
+gradio_imageslider~=0.0.20
+
+# Test dependencies
+pytest~=7.4.0

@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+*.env
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and outputs
+*.log
+*.h5
+*.ckpt
+
+# Test and coverage
+htmlcov/
+.tox/
+.coverage
+.cache/
+.pytest_cache/
+
+# Package/build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# WandB
+wandb/
+
+# Gradio temp files
+gradio_cached_examples/
+
+nerf_demo.egg-info/
+
+checkpoints/

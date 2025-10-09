@@ -1,0 +1,51 @@
+# Select a depth model
+POST http://127.0.0.1:8000/depth-anything-v2/select
+Content-Type: application/json
+Accept: application/json
+
+{
+  "model_name": "vitb_base"
+}
+
+###
+
+# Get current selected model
+GET http://127.0.0.1:8000/depth-anything-v2/current
+Accept: application/json
+
+###
+
+# Predict depth
+POST http://127.0.0.1:8000/depth-anything-v2/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+file=@../assets/depth_img.png
+
+###
+# Select with invalid model
+POST http://127.0.0.1:8000/depth-anything-v2/select
+Content-Type: application/json
+Accept: application/json
+
+{
+  "model_name": "non_existent_model"
+}
+
+###
+
+# Predict depth without file
+POST http://127.0.0.1:8000/depth-anything-v2/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+###
+
+# Predict depth with non-image file
+POST http://127.0.0.1:8000/depth-anything-v2/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+file=@../assets/fake.txt
+
+###

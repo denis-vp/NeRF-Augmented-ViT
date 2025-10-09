@@ -1,0 +1,55 @@
+# Select a Roma model
+POST http://127.0.0.1:8000/tiny-roma/select
+Content-Type: application/json
+Accept: application/json
+
+{
+  "model_name": "base"
+}
+
+###
+
+# Get current selected Roma model
+GET http://127.0.0.1:8000/tiny-roma/current
+Accept: application/json
+
+###
+
+# Predict Roma (replace with valid image files)
+POST http://127.0.0.1:8000/tiny-roma/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+file1=@../assets/roma_imgA.jpg
+file2=@../assets/roma_imgB.jpg
+
+###
+# Select with invalid model
+POST http://127.0.0.1:8000/tiny-roma/select
+Content-Type: application/json
+Accept: application/json
+
+{
+  "model_name": "non_existent_model"
+}
+
+###
+
+# Predict Roma with only one file
+POST http://127.0.0.1:8000/tiny-roma/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+file1=@../assets/roma_imgA.jpg
+
+###
+
+# Predict Roma with invalid file types
+POST http://127.0.0.1:8000/tiny-roma/predict
+Accept: application/json
+Content-Type: multipart/form-data
+
+file1=@../assets/fake.txt
+file2=@../assets/fake.txt
+
+###
