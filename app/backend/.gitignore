@@ -48,5 +48,3 @@ wandb/
 gradio_cached_examples/
 
 nerf_demo.egg-info/
-
-checkpoints/
